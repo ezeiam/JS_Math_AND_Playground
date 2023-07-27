@@ -169,3 +169,117 @@ console.log(`Area of triangle given base and height: ${areaOfTriangle(3,7)}`)
  * the second number.
  * 
  */
+
+function raiseIt(number1, number2){
+    return number1 ** number2
+}
+console.log(`Raising bases to powers: ${raiseIt(3,2)}`)
+
+/**
+ * Write a JS function that takes a number as input and
+ * returns true if it is even (divisible by 2) and false 
+ * if it is odd.
+ * 
+ */
+
+function isItEven(number){
+    if(number % 3 === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+console.log(`Is it even: ${isItEven(3)}`)
+
+/**
+ * Write a JS function that takes a number as input and
+ * returns the next even number greater than the input
+ * 
+ */
+// Return to MATH!
+
+function returnGreater(number){
+    return number 
+}
+
+
+// Return to MATH!
+
+//More data structures
+/**
+ * write a JS function that takes an array of 
+ * strings and returns the total number of 
+ * characters in the array
+ * 
+ */
+
+let stringArray = ["world","school","fun","create","cool"]
+
+function lengthOfstringsArray(array){
+    let totalCharacters = 0;
+    for(let i =0; i !== array.length; i++){
+       totalCharacters += array[i].length
+    }
+    return totalCharacters;
+}
+console.log(`Total characters: ${lengthOfstringsArray(stringArray)}`)
+
+/**
+ * Create an object representing a school board and implement a 
+ * method to display all the information
+ * 
+ */
+
+const schoolBoard = {
+    trustee: "James Cool",
+    council: ["Ryan","Patrick","Merideth","Susan"],
+    districts: ["Valley District","SunCrest District","OrangSmile District"],
+    displayBoardDetails: function() {
+        const details = `School board:\nTrustee - ${this.trustee} | Council - ${this.council} |\nDistrict - ${this.districts}`;
+        console.log(details)
+    }
+}
+schoolBoard.displayBoardDetails();
+
+/**
+ * Write a JS function that takes an array of numbers and returns the index of the first negative number in the array. If there are no negative numbers return -1
+ * 
+ * OK!...
+ */
+
+function search_for_index(array_of_numbers){
+    for(let i = 0; i < array_of_numbers.length; i++){
+        if(array_of_numbers[i] < 0){
+        console.log(`Negative: ${array_of_numbers[i]}`)
+        }
+        else{
+        }
+    }
+    return -1;
+
+}
+let numberNew = [3, 4, -2, -4, 2, 5] 
+console.log(search_for_index(numberNew));
+
+// Back to JS Objects
+const person = {
+     name: 'Fred',
+     occupation: 'farmer',
+     pet: true,
+     display: function(){
+        console.log(`Name: ${this.name}\nOccupation: ${this.occupation} Pet: ${this.pet}`)
+     }
+}
+person.city = 'britaTown'
+delete person.occupation
+person.occupation = 'Gardener'
+person.display()
+console.log(person)
+console.log("display" in person)
+
+let string_data = "pet"
+function check_existence(key){
+    return key in person;
+}
+console.log(`Your cool check program: ${check_existence(string_data)}`);
